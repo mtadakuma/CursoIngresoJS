@@ -8,6 +8,6 @@ function SacarResto()
 	var valorDos = document.getElementById("numeroDivisor").value;
 	var numeroDividendo = parseInt(valorUno);
 	var numeroDivisor = parseInt(valorDos);
-	var total = numeroDividendo % numeroDivisor;
-	alert("el resto es " + total);
+	var resultado = numeroDividendo % numeroDivisor;
+	alert("el resto es " + resultado);
 }
