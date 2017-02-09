@@ -24,7 +24,7 @@ function Materiales ()
 {
 	var largo = parseInt(document.getElementById("Largo").value);
 	var ancho = parseInt(document.getElementById("Ancho").value);
-	var rectanguloDeAlambre = 2 * (largo + ancho);
+	var rectanguloDeAlambre = (largo * ancho);
 	var bolsasCemento = 2 * rectanguloDeAlambre;
 	var bolsasCal = 3 * rectanguloDeAlambre;
 	console.log("Se necesitan " + bolsasCemento + " bolsas de Cemento y se necesitan " + bolsasCal + 
