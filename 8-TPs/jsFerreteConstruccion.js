@@ -8,7 +8,7 @@ function Rectangulo ()
 {
 	var largo = parseInt(document.getElementById("Largo").value);
 	var ancho = parseInt(document.getElementById("Ancho").value);
-	var rectanguloDeAlambre = 2 * (largo + ancho);
+	var rectanguloDeAlambre = /*2*/ 6 * (largo + ancho);
 	console.log("Se tienen que comprar " + rectanguloDeAlambre + " metros de alambre. Cada pieza debería ser de " 
 		+ Math.floor(rectanguloDeAlambre / 3) + " metros cada uno.");
 }
@@ -16,7 +16,7 @@ function Circulo ()
 {
 	var radio = parseInt(document.getElementById("Radio").value)
 	var largo = parseInt(document.getElementById("Largo").value);
-	var circuloDeAlambre = Math.floor(3.14 * radio);
+	var circuloDeAlambre = (2* 3.14 *radio);
 	console.log("Se tienen que comprar " + circuloDeAlambre + " metros de alambre. Cada pieza debería ser de " 
 		+ Math.floor(circuloDeAlambre / 3) + " metros cada uno.");
 }
