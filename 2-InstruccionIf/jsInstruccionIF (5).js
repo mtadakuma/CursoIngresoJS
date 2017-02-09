@@ -6,4 +6,4 @@ function Mostrar()
 		alert("Usted NO es adolescente");
 	}
 
-}//FIN DE LA FUNCIÓN
+}//FIN DE LA FUNCION

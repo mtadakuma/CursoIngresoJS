@@ -4,7 +4,10 @@ function Mostrar()
 var mesDelAño = document.getElementById('mes').value;
 
 alert (mesDelAño);
-
+switch(mesDelAño):
+{
+	case "Enero":
+}
 
 
 
