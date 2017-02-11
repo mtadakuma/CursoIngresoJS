@@ -8,7 +8,72 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  ”Usted pago X de IIBB.”, siendo X el impuesto que se pagó. 
 
  */
+
+/*
 function CalcularPrecio () 
 {
- 	
+ 	var cantLamp = parseInt(document.getElementById("Cantidad").value);
+ 	var tipoLamp = document.getElementById("Marca").value;
+ 	var precioFinal = cantLamp * 35; 
+ 	console.log(precioFinal);
+ 	var total;
+ 	if (cantLamp >=6 && tipoLamp == "ArgentinaLuz"){
+ 		total = precioFinal*0.50;
+ 	} else if(cantLamp == 5 && tipoLamp == "ArgentinaLuz"){
+ 		total = precioFinal*0.60;
+ 	} else if (cantLamp == 5 &&  tipoLamp != "ArgentinaLuz"){
+ 		total = precioFinal*0.70;
+ 	} else if (cantLamp == 4 && (tipoLamp =="ArgentinaLuz" || tipoLamp == "FelipeLamparas")){
+ 		total = precioFinal * 0.75;
+ 	} else if (cantLamp == 4 && (tipoLamp != ""))
+
+ 	else {
+ 		console.log("Error");
+ 	}
+ 	document.getElementById("precioDescuento").value = total;   
+*/
+
+function CalcularPrecio () 
+{
+ 	var cantLamp = parseInt(document.getElementById("Cantidad").value);
+ 	var tipoLamp = document.getElementById("Marca").value;
+ 	var precioFinal = cantLamp * 35; 
+ 	console.log(precioFinal);
+ 	var total; 	
+
+	switch (cantLamp){
+		case 5:
+			if(tipoLamp == "ArgentinaLuz"){
+				total = precioFinal*0.60;
+			} else {
+				total = precioFinal*0.70;
+			}
+			break;
+		case 4:
+			if(tipoLamp == "ArgentinaLuz" || tipoLamp == "FelipeLamparas"){
+				total = precioFinal * 0.75;
+			} else {
+				total = precioFinal * 0.80;
+			}
+			break;
+		case 3: 
+			if(tipoLamp == "ArgentinaLuz"){
+				total = precioFinal * 0.85;
+			} else if (tipoLamp == "FelipeLamparas") {
+				total = precioFinal * 0.90;
+			} else {
+				total = precioFinal * 0.95;
+			}
+		default:
+				if(cantLamp>= 6){
+					total = precioFinal*0.50;
+				} else if (total >= 120) {
+				var Iibb = total * 0.10;
+				var totalMasIibb = total + Iibb;
+				document.getElementById("precioDescuento").value = "”Usted pago " + totalMasIibb + " de IIBB.”, siendo " + Iibb + " el impuesto que se pagó"
+				} else {
+				document.getElementById("precioDescuento").value = total;
+				}	
+			break;
+		}
 }
