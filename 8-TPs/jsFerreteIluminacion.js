@@ -37,43 +37,41 @@ function CalcularPrecio ()
 {
  	var cantLamp = parseInt(document.getElementById("Cantidad").value);
  	var tipoLamp = document.getElementById("Marca").value;
- 	var precioFinal = cantLamp * 35; 
- 	console.log(precioFinal);
- 	var total; 	
-
+ 	var total = cantLamp * 35
+ 	document.getElementById("precioDescuento").value = desc;
+ 	
 	switch (cantLamp){
 		case 5:
 			if(tipoLamp == "ArgentinaLuz"){
-				total = precioFinal*0.60;
+				desc = total*0.60;
 			} else {
-				total = precioFinal*0.70;
+				desc = total*0.70;
 			}
 			break;
 		case 4:
 			if(tipoLamp == "ArgentinaLuz" || tipoLamp == "FelipeLamparas"){
-				total = precioFinal * 0.75;
+				desc = total * 0.75;
 			} else {
-				total = precioFinal * 0.80;
+				desc = total * 0.80;
 			}
 			break;
 		case 3: 
 			if(tipoLamp == "ArgentinaLuz"){
-				total = precioFinal * 0.85;
+				desc = total * 0.85;
 			} else if (tipoLamp == "FelipeLamparas") {
-				total = precioFinal * 0.90;
+				desc = total * 0.90;
 			} else {
-				total = precioFinal * 0.95;
+				desc = total * 0.95;
 			}
+			break;
 		default:
 				if(cantLamp>= 6){
-					total = precioFinal*0.50;
-				} else if (total >= 120) {
-				var Iibb = total * 0.10;
-				var totalMasIibb = total + Iibb;
-				document.getElementById("precioDescuento").value = "”Usted pago " + totalMasIibb + " de IIBB.”, siendo " + Iibb + " el impuesto que se pagó"
+					desc = total*0.50;
 				} else {
-				document.getElementById("precioDescuento").value = total;
-				}	
+					desc = total;
+				} 
 			break;
+
 		}
 }
+
