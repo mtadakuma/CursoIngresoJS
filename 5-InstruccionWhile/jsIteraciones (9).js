@@ -13,11 +13,11 @@ function Mostrar()
 		var numero = parseInt(prompt("Ingrese numero"));
 		if (numero > max){
 			max = numero;
-		} else if (numero < min) { // no me reconoce el else if porque solo toma IF ver
-			min = numero;
-		} else {
 			console.log(numero);
+		} else {
+			min = numero;
 		}
+		
 		respuesta = prompt("¿Desea seguir?");
 		console.log(respuesta);
 	}
