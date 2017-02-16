@@ -10,7 +10,7 @@ function Mostrar()
 		console.log(numeros);
 		acumulador+=numeros;
 		respuesta = prompt ("¿Desea continuar?");
-		console.log(respuesta);
+		console.log("¿Desea continuar? " + respuesta);
 	}
 
 document.getElementById('suma').value=acumulador;
