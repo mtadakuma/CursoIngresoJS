@@ -42,6 +42,7 @@ console.log( " Positivos: " + positivos,
 	);
 
 }
+
 /*
 function Mostrar()
 {
