@@ -3,23 +3,25 @@ function Mostrar()
 
 	var contador=0;
 	// declarar variables
-	var max = 0;
-	var min = 0;
+	var max;
+	var min;
 	var respuesta='si';
+	var primera = true;
 
-	while(respuesta!='no')
+	while(confirm("¿Desea continuar?"))
 	{
 		contador++;
 		var numero = parseInt(prompt("Ingrese numero"));
-		if (numero > max){
+		if (primera){
+			primera = false;
 			max = numero;
-			console.log(numero);
+			min = numero; // Creamos una bandera para poder poner el primer valor
+		} else if (numero > max) {
+			max = numero;
 		} else {
-			min = numero;
+			min = numero;			
 		}
-		
-		respuesta = prompt("¿Desea seguir?");
-		console.log(respuesta);
+
 	}
 
 document.getElementById("maximo").value = max;
