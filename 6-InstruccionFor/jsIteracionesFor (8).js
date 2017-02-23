@@ -4,7 +4,7 @@ var num = parseInt(prompt("Ingrese numero"));
 console.log(num);
 var contDivisores = 0;
 
-for(var i=0; i<=num; i++){
+for(var i=0; i<=parseInt(num/2)+1; i++){ //mas eficiente el programa
 	if(num%i==0){
 		contDivisores++;
 	}
